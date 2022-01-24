@@ -6,9 +6,7 @@ if [ -z "${GITHUB_TOKEN}" ]; then
     exit 1
 fi
 
-if [ -z "${BRANCH_NAME}" ]; then
-   export BRANCH_NAME=main
-fi
+export BRANCH_NAME=main
 
 # initialize git
 remote_repo="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
